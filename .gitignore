@@ -9,7 +9,7 @@
 /package-lock.json
 
 # config for dev
-config/config.dev.js
+# config/config.dev.js
 
 # config for default prod
-config/default.prod.js
+# config/default.prod.js
