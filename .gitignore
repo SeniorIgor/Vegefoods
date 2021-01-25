@@ -1,0 +1,15 @@
+# layouts
+*.psd
+*.fig
+
+# node_modules
+/node_modules/*
+
+# client node_modules
+/package-lock.json
+
+# config for dev
+config/config.dev.js
+
+# config for default prod
+config/default.prod.js

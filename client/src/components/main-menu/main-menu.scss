@@ -1,0 +1,113 @@
+//
+@import "../../styles/variables.scss";
+
+.main-menu {
+	display: none;
+	position: absolute;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 110px 0 0 0;
+	width: 100%;
+	height: calc(100%);
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background-color: $color_white;
+	overflow: auto;
+
+	&_active {
+		display: flex;
+	}
+
+	&__list-wrap {
+		padding: 0 0 40px;
+	}
+
+	&__list {
+	}
+
+	&__item {
+		border-bottom: 1px solid #ececec;
+		overflow: hidden;
+	}
+
+	&__link {
+		display: block;
+		padding: 15px 0 16px;
+		width: 100%;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1.5px;
+		color: #043e44 !important;
+		// color: #212529 !important;
+		background-color: transparent;
+	}
+
+	&__contacts {
+		display: none;
+	}
+
+	@media (max-width: 767px) {
+		padding: 86px 0 0 0;
+
+		&__contacts {
+			display: block;
+		}
+	}
+}
+
+.menu-contacts {
+	margin-top: auto;
+	padding: 12px 0;
+	// background-color: $color_green;
+	background-color: #faf8f8;
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		// align-items: center;
+
+		// text
+		font-size: 12px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		// color: $color_white;
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		// padding: 2px 0;
+	}
+
+	&__link-image {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&_phone {
+			-moz-transform: rotate(-80deg) scale(0.9); /* Firefox */
+			-moz-transform-origin: center;
+			-o-transform: rotate(-80deg) scale(0.9); /* Opera */
+			-o-transform-origin: center;
+			-webkit-transform: rotate(-80deg) scale(0.9); /* Safari And Chrome */
+			-webkit-transform-origin: center;
+			transform: rotate(-80deg) scale(0.9); /* Standard Property */
+			transform-origin: center; /* Standard Property */
+		}
+
+		&_delivery {
+			margin-top: -2px;
+		}
+	}
+
+	&__link-text {
+		padding: 5px 0 5px 40px;
+		line-height: 18px;
+		color: #043e44 !important;
+	}
+}

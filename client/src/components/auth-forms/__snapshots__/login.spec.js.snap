@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AUTH_LOGIN:  RENDER:  FormFields count 1`] = `
+<div
+  className="auth"
+>
+  <h1
+    className="auth__title"
+  >
+    Войти на сайт
+  </h1>
+  <div
+    className="auth__form form"
+  >
+    <div
+      className="form__field-wrap"
+      key="login-field-email"
+    >
+      <FormField
+        error=""
+        fieldName="email"
+        id="login-field-email"
+        onChange={[Function]}
+        title="Email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form__field-wrap"
+      key="login-field-password"
+    >
+      <FormField
+        error=""
+        fieldName="password"
+        id="login-field-password"
+        onChange={[Function]}
+        title="Пароль"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="form__reset-wrap"
+    >
+      <a
+        className="form__reset-btn"
+        href="#"
+      >
+        Забыли пароль?
+      </a>
+    </div>
+    <button
+      className="btn_order form__btn-submit"
+      onClick={[Function]}
+    >
+      Войти
+    </button>
+  </div>
+</div>
+`;
+
+exports[`AUTH_LOGIN: -------------------------------------------------- RENDER: ---------------------------------------------------- FormFields count 1`] = `
+<div
+  className="auth"
+>
+  <h1
+    className="auth__title"
+  >
+    Войти на сайт
+  </h1>
+  <div
+    className="auth__form form"
+  >
+    <div
+      className="form__field-wrap"
+      key="login-field-email"
+    >
+      <FormField
+        error=""
+        fieldName="email"
+        id="login-field-email"
+        onChange={[Function]}
+        title="Email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form__field-wrap"
+      key="login-field-password"
+    >
+      <FormField
+        error=""
+        fieldName="password"
+        id="login-field-password"
+        onChange={[Function]}
+        title="Пароль"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="form__reset-wrap"
+    >
+      <a
+        className="form__reset-btn"
+        href="#"
+      >
+        Забыли пароль?
+      </a>
+    </div>
+    <button
+      className="btn_order form__btn-submit"
+      onClick={[Function]}
+    >
+      Войти
+    </button>
+  </div>
+</div>
+`;
+
+exports[`AUTH_LOGIN: --------------------------------------------------------- RENDER: ----------------------------------------------------------- FormFields count 1`] = `
+<div
+  className="auth"
+>
+  <h1
+    className="auth__title"
+  >
+    Войти на сайт
+  </h1>
+  <div
+    className="auth__form form"
+  >
+    <div
+      className="form__field-wrap"
+      key="login-field-email"
+    >
+      <FormField
+        error=""
+        fieldName="email"
+        id="login-field-email"
+        onChange={[Function]}
+        title="Email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form__field-wrap"
+      key="login-field-password"
+    >
+      <FormField
+        error=""
+        fieldName="password"
+        id="login-field-password"
+        onChange={[Function]}
+        title="Пароль"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="form__reset-wrap"
+    >
+      <a
+        className="form__reset-btn"
+        href="#"
+      >
+        Забыли пароль?
+      </a>
+    </div>
+    <button
+      className="btn_order form__btn-submit"
+      onClick={[Function]}
+    >
+      Войти
+    </button>
+  </div>
+</div>
+`;
+
+exports[`AUTH_LOGIN: --------------------------------------------------------- RENDER: ----------------------------------------------------------- FormFields count 2`] = `
+<div
+  className="auth"
+>
+  <h1
+    className="auth__title"
+  >
+    Войти на сайт
+  </h1>
+  <div
+    className="auth__form form"
+  >
+    <div
+      className="form__field-wrap"
+      key="login-field-email"
+    >
+      <FormField
+        error=""
+        fieldName="email"
+        id="login-field-email"
+        onChange={[Function]}
+        title="Email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form__field-wrap"
+      key="login-field-password"
+    >
+      <FormField
+        error=""
+        fieldName="password"
+        id="login-field-password"
+        onChange={[Function]}
+        title="Пароль"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="form__reset-wrap"
+    >
+      <a
+        className="form__reset-btn"
+        href="#"
+      >
+        Забыли пароль?
+      </a>
+    </div>
+    <button
+      className="btn_order form__btn-submit"
+      onClick={[Function]}
+    >
+      Войти
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,35 @@
+{
+	"env": {
+		"test": {
+			"presets": [
+				[
+					"@babel/preset-env",
+					{
+						"modules": "commonjs",
+						"debug": false
+					}
+				],
+				"@babel/preset-react"
+			],
+			"plugins": [
+				"@babel/plugin-syntax-dynamic-import",
+				"@babel/plugin-proposal-class-properties"
+			]
+		}
+	},
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"corejs": 3.6,
+				"useBuiltIns": "usage",
+				"debug": false,
+				"modules": false
+			}
+		],
+		"@babel/react"
+	],
+	"plugins": [
+		"@babel/plugin-proposal-class-properties"
+	]
+}

@@ -1,0 +1,68 @@
+//
+@import "../../styles/variables.scss";
+
+.ordering {
+	padding: 90px 0;
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__message {
+		padding: 0 0 10px;
+	}
+
+	&__field-wrap {
+		padding: 0 0 14px 0;
+	}
+
+	&__date-wrap {
+		display: flex;
+		justify-content: flex-start;
+		padding: 0 0 15px;
+	}
+
+	&__date-field {
+		width: calc(50% - 10px);
+
+		&:first-child {
+			margin-right: 20px;
+		}
+	}
+
+	&__field-title {
+		display: block;
+		font-size: 15px;
+		margin-bottom: 0.4em;
+		letter-spacing: 0.4px;
+		font-weight: 300;
+	}
+
+	&__details {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		margin-top: 35px;
+	}
+
+	@media (max-width: 1100px) {
+		padding: 60px 0;
+	}
+
+	@media (max-width: 767px) {
+		padding: 40px 0 65px;
+
+		&__date-wrap {
+			flex-direction: column;
+		}
+
+		&__date-field {
+			width: 100%;
+
+			&:first-child {
+				margin: 0 0 15px;
+			}
+		}
+	}
+}

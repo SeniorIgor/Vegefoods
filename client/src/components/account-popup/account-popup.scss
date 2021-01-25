@@ -1,0 +1,106 @@
+//
+@import "../../styles/variables.scss";
+
+.account-popup {
+	position: absolute;
+	margin: 0 0 0 -88px;
+	height: auto;
+	z-index: 10;
+	background-color: transparent;
+	visibility: hidden;
+	transform: translate(0, 20px);
+	opacity: 0;
+	transition: all 0.3s ease;
+
+	&_active {
+		visibility: visible;
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+
+	&__user-lk-list {
+		position: relative;
+		top: 15px;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		width: 215px;
+		padding: 22px 0 0;
+		border-radius: 6px;
+		background-color: $color_white;
+		box-shadow: 0 2px 15px rgba(68, 68, 68, 0.15);
+		overflow: hidden;
+
+		-webkit-box-shadow: 0 2px 15px rgba(68, 68, 68, 0.15);
+	}
+
+	// &__user-lk-item {
+	// }
+
+	&__user-lk-link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 12px 12px 12px 0;
+		width: 100%;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 17px;
+		letter-spacing: 0.2px;
+		color: #444 !important;
+
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+
+		&:hover {
+			background-color: #faf8fb;
+			// background-color: #f8f8f8;
+		}
+
+		&_logout {
+			padding: 20px 12px 18px 0;
+			margin-top: 25px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -21px;
+				right: -21px;
+				height: 1px;
+				background-color: #dfdfdf !important;
+			}
+
+			& .account-popup__user-lk-img {
+				margin-right: 20px;
+				margin-left: 21px;
+				width: 22px;
+				height: 22px;
+
+				stroke: $color_green;
+				fill: none;
+			}
+		}
+	}
+
+	&__user-lk-img {
+		margin-right: 21px;
+		margin-left: 21px;
+		width: 24px;
+		height: 24px;
+
+		stroke: $color_green;
+		fill: none;
+
+		.account-popup__user-lk-item:first-child & {
+			margin-right: 21px;
+			margin-left: 18px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+}

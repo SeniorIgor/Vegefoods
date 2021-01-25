@@ -1,0 +1,146 @@
+//
+
+@import "./../../styles/variables.scss";
+
+.header {
+	position: relative;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+	z-index: 101;
+	background-color: $color_white;
+
+	&__contacts {
+		background-color: $color_green;
+
+		.menu__body & {
+			display: none;
+		}
+	}
+
+	&__contacts-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		// text
+		font-size: 11px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $color_white;
+	}
+
+	&__nav-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__btn-main-menu {
+		width: 186px;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: -0.5px;
+		text-transform: uppercase;
+		transition: $btn-transition;
+		color: $color_green;
+
+		z-index: 101;
+
+		&:visited {
+			color: $color_green;
+		}
+		&:hover {
+			color: lighten(#6f9639, 15) !important;
+		}
+	}
+
+	&__logo-image {
+		margin-right: 8px;
+		width: 50px;
+		height: 50px;
+		fill: #6f9639;
+		transition: fill 0.2s ease;
+
+		// fill: #73b319;
+		// 6f9639
+		// c2e4a1
+
+		.header__logo:hover & {
+			fill: lighten(rgb(111, 150, 57), 15);
+		}
+	}
+
+	&__header-menu {
+		display: flex;
+	}
+
+	@media (max-width: 767px) {
+		&__contacts {
+			display: none;
+		}
+
+		&__btn-main-menu {
+			width: auto;
+		}
+
+		&__logo-image {
+			margin: 0;
+			width: 40px;
+			height: 40px;
+		}
+
+		&__logo-text {
+			display: none;
+		}
+	}
+
+	@media (max-width: 500px) {
+		&__logo {
+			display: none;
+		}
+	}
+}
+
+.header-menu {
+	&__item {
+		padding: 0 8px;
+
+		&:last-child {
+			display: flex;
+			padding-right: 0;
+		}
+	}
+
+	@media (max-width: 767px) {
+		&__item {
+			padding: 0 7px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		&__item {
+			padding: 0 6px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}

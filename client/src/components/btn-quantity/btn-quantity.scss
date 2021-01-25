@@ -1,0 +1,119 @@
+//
+@import "../../styles/variables.scss";
+
+.quantity {
+	display: flex;
+
+	&__display {
+		padding: 0 20px;
+		width: 103px;
+		height: 40px;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 40px;
+		border-radius: 0 !important;
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	// &__btn-large {
+	// }
+
+	&__btn {
+		position: relative;
+		width: 37px;
+		height: 40px;
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		background-color: $color_white;
+		// transition: background-color 0.3s ease;
+
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		-webkit-tap-highlight-color: transparent;
+
+		&:hover {
+			-webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.2);
+			box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.2);
+			background-color: $color_light;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: calc(50% - 1px);
+			left: calc(50% - 6px);
+			width: 12px;
+			height: 2px;
+			background-color: $color_gray;
+		}
+
+		&_minus {
+			margin-right: 5px;
+			border-radius: 8px 0 0 8px;
+		}
+
+		&_plus {
+			margin-left: 5px;
+			border-radius: 0 8px 8px 0;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: calc(50% - 1px);
+				left: calc(50% - 6px);
+				width: 12px;
+				height: 2px;
+				background-color: $color_gray;
+				transform: rotate(90deg);
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			&:hover {
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				background-color: #ffffff !important;
+			}
+		}
+	}
+
+	@media (max-width: 570px) {
+		justify-content: center;
+	}
+}
+
+.btn-large {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 187px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 8px;
+	background-color: $color_green;
+	// transition: background-color 0.3s ease;
+
+	&:hover {
+		// color: lighten($color_green, 20);
+		// -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.4);
+		// -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.4);
+		// box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.4);
+		background-color: lighten(rgb(111, 150, 57), 6) !important;
+	}
+
+	&__text {
+		margin-right: 10px;
+		font-size: 16px;
+		font-weight: 300;
+		color: $color_white;
+	}
+
+	&__image {
+		width: 14%;
+		height: auto;
+		background-color: transparent;
+	}
+}

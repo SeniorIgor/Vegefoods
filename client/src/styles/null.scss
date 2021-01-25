@@ -1,0 +1,81 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+:focus,
+:active,
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+}
+body {
+	line-height: $lh;
+	font-size: $fz;
+	font-family: $fontfamily;
+	color: $color;
+}
+input,
+button,
+textarea {
+	font-family: $fontfamily;
+}
+// input {
+// 	display: none;
+// }
+button {
+	cursor: pointer;
+	padding: 0;
+	border: 0;
+	outline: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+ul {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}

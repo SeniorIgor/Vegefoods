@@ -1,0 +1,74 @@
+//
+
+@import "./../../styles/variables.scss";
+
+.title-view {
+	position: relative;
+	overflow: hidden;
+
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 150px 0 160px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: 100% 100%;
+		background-size: contain;
+		filter: brightness(65%);
+		z-index: -1;
+
+		// & div {
+		// width: 100%;
+		// height: 100%;
+		// background-repeat: no-repeat;
+		// background-position: 50% 5%;
+		// background-size: cover;
+		// }
+	}
+
+	// &__text {
+	// 	display: none;
+	// 	position: relative;
+	// 	padding: 0 0 5px;
+	// 	z-index: 1;
+	// 	font-size: 16px;
+	// 	font-weight: 300;
+	// 	text-align: center;
+	// 	letter-spacing: 3px;
+	// 	text-transform: uppercase;
+	// 	color: $color_green;
+	// 	text-shadow: 1px 1px 2px black;
+	// 	// text-shadow: #000 0 0 5px;
+	// }
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		font-size: 45px;
+		font-weight: 700;
+		line-height: 45px;
+		text-align: center;
+		letter-spacing: 3px;
+		word-spacing: 7px;
+		color: $color_white;
+		text-shadow: 1px 1px 2px black;
+	}
+
+	@media (max-width: 600px) {
+		&__title {
+			width: 280px;
+			font-size: 38px;
+			line-height: 40px;
+			// max-width: 200px;
+		}
+	}
+}

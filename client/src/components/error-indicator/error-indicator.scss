@@ -1,0 +1,141 @@
+//
+@import "./../../styles/variables.scss";
+
+.error-indicator {
+	padding: 50px 0 90px;
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__image {
+		position: relative;
+		width: 350px;
+		height: 300px;
+	}
+
+	&__title {
+		font-size: 60px;
+		font-weight: 500;
+		line-height: 75px;
+		color: $color_green;
+		text-align: center;
+
+		&_min {
+			padding: 0 0 25px;
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 27px;
+		text-align: center;
+		width: 350px;
+	}
+
+	&__btn {
+		margin: 40px 0 0 0;
+		width: 150px;
+	}
+
+	@media (max-width: 400px) {
+		// padding: 60px 0;
+
+		&__text {
+			width: 100%;
+		}
+
+		&__image {
+			width: 90%;
+			// width: 260px;
+		}
+	}
+}
+
+// .error-indicator {
+// 	position: relative;
+// 	padding: 70px 0 70px;
+// 	// background-color: rgba(255, 255, 255, 0.8);
+
+// 	&__text-wrapper {
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		padding: 0 0 20px;
+// 	}
+
+// 	&__bg-wrapper {
+// 		position: relative;
+// 		padding: 45% 0 0;
+// 	}
+
+// 	&__bg-image {
+// 		position: absolute;
+// 		left: 0;
+// 		bottom: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		background-repeat: no-repeat;
+// 		background-position: center bottom;
+// 		background-size: contain;
+// 	}
+
+// 	&__title {
+// 		font-family: "Amatic SC", cursive;
+// 		padding: 0 0 30px 0;
+// 		font-size: 5rem;
+// 		line-height: 5rem;
+// 		font-weight: 700;
+// 		color: $color_green;
+// 		text-align: center;
+// 	}
+
+// 	&__text {
+// 		font-size: 18px;
+// 		line-height: 30px;
+// 		// font-weight: 300;
+// 		text-align: center;
+// 		// color: $color_black;
+// 	}
+
+// 	&__link {
+// 		padding: 0 0 0 5px;
+// 		font-weight: 500;
+// 		text-decoration: underline;
+// 		color: $color_green;
+// 	}
+
+// 	@media (min-width: 1100px) {
+// 		&__bg-wrapper {
+// 			padding: 0;
+// 			height: 500px;
+// 		}
+// 	}
+
+// 	@media (max-width: 767px) {
+// 		padding-top: 60px;
+// 		// padding: 40px 0 20px;
+
+// 		&__title {
+// 			padding: 0 0 40px 0;
+// 			font-size: 4rem;
+// 			line-height: 4rem;
+// 		}
+
+// 		&__text {
+// 			width: 240px;
+// 		}
+// 	}
+
+// 	// @media (min-width: 500px) and (max-height: 650px) {
+// 	// 	padding: 60px 0 20px;
+
+// 	// 	&__bg-image {
+// 	// 		display: none;
+// 	// 	}
+// 	// }
+// }

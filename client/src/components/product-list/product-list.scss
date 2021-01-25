@@ -1,0 +1,51 @@
+//
+
+@import "./../../styles/variables.scss";
+
+$countColumns: 4;
+
+.product-list {
+	padding: 0 0 50px 0;
+
+	&__list-goods {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		margin: 0 -10px 0 -10px;
+	}
+
+	&__item {
+		width: calc((100% - 20px * 4) / 4);
+		margin: 0 10px 20px 10px;
+	}
+
+	@media (max-width: 1000px) {
+		width: 720px;
+		margin: 0 auto;
+
+		&__item {
+			width: calc((100% - 20px * 2) / 2);
+			margin: 0 10px 20px 10px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		width: 520px;
+		margin: 0 auto;
+
+		&__item {
+			width: 100%;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	@media (max-width: 570px) {
+		width: calc(100% - 20px);
+		padding: 0 0 30px 0;
+
+		&__item {
+			width: 100%;
+			margin: 0 0 20px 0;
+		}
+	}
+}

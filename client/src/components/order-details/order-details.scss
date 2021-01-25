@@ -1,0 +1,62 @@
+//
+@import "../../styles/variables.scss";
+
+.ordering-details {
+	// align-self: flex-end;
+	// margin-top: 35px;
+	width: 300px;
+	border-radius: 6px;
+	padding: 18px 20px 22px;
+	border: 1px solid #ececec;
+
+	&__title {
+		padding: 0 0 20px;
+		font-size: 30px;
+		line-height: 27px;
+		color: $color_black;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+
+		&_result {
+			padding: 20px 0 12px;
+			margin-top: 20px;
+			margin-bottom: 0;
+			font-size: 24px;
+			color: $color_black;
+			border-top: 1px solid #ececec;
+
+			.ordering-details__text {
+				font-weight: 400;
+			}
+
+			.ordering-details__price {
+				color: $color_green;
+			}
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+	}
+
+	&__price {
+		letter-spacing: 0.4px;
+		color: #21b977;
+	}
+
+	&__btn-wrap {
+		padding: 16px 0 0 0;
+	}
+
+	&__btn {
+		width: 100%;
+	}
+
+	@media (max-width: 480px) {
+		width: 100%;
+	}
+}

@@ -1,0 +1,182 @@
+//
+
+@import "../../styles/variables.scss";
+
+// background-color: #BE3690;
+// background: linear-gradient(89.65deg, #E56B31 2.39%, #BE3690 99.79%);
+
+.contacts {
+	padding: 110px 0;
+
+	&__wrap {
+	}
+
+	&__main {
+		display: flex;
+		padding: 0 0 40px;
+		margin: 0 -10px;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin: 0 10px;
+		width: calc(25% - 20px);
+	}
+
+	&__address {
+	}
+
+	&__address-wrap {
+	}
+
+	&__title {
+		padding: 15px 0 15px;
+		font-size: 28px;
+		font-weight: 300;
+		color: rgb(34, 34, 34);
+	}
+
+	&__address-text {
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+
+	&__map {
+		position: relative;
+		padding: 30px 0 0;
+		height: 430px;
+	}
+
+	&__map-wrap {
+		position: absolute;
+		top: 30px;
+		left: 0;
+		width: 100%;
+		height: 400px;
+	}
+
+	@media (max-width: 1100px) {
+		&__main {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+		}
+
+		&__column {
+			margin: 0 10px;
+			width: calc(50% - 20px);
+		}
+
+		&__address {
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding: 50px 0 70px 0;
+
+		&__main {
+			margin: 0;
+		}
+
+		&__column {
+			margin: 0;
+			width: 100%;
+		}
+
+		&__title {
+			padding: 5px 0 15px;
+			text-align: center;
+		}
+
+		&__address-text {
+			margin: 0 auto;
+			max-width: 260px;
+			text-align: center;
+		}
+
+		&__map {
+			position: relative;
+			padding: 25px 0 0;
+			height: 425px;
+		}
+
+		&__map-wrap {
+			position: absolute;
+			top: 25px;
+			left: 0;
+			width: 100%;
+			// height: 350px;
+		}
+	}
+}
+
+.contacts-column {
+	position: relative;
+	display: flex;
+	margin-bottom: 20px;
+	flex-direction: column;
+	padding: 20px 15px;
+	border-radius: 8px;
+	border: 1px solid #e6e6e6;
+
+	&__wrap {
+		height: 100%;
+	}
+
+	&__image-wrap {
+		width: 100%;
+		height: 65px;
+		margin: 0 0 20px;
+	}
+
+	&__image {
+		width: 65px;
+		height: 65px;
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: 15px;
+		width: 100%;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 24px;
+		letter-spacing: 0.1px;
+		color: #000000 !important;
+	}
+
+	&__text {
+		margin-bottom: 45px;
+		max-width: 200px;
+		letter-spacing: 0.1px;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 20px;
+		// color: #b2b2b2;
+	}
+
+	&__link-wrap {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		left: 0;
+		bottom: 20px;
+		width: 100%;
+	}
+
+	&__link {
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		color: $color_green;
+		// color: rgb(34, 34, 34) !important;
+
+		&:hover {
+			color: #b2b2b2 !important;
+		}
+	}
+}

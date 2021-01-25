@@ -1,0 +1,41 @@
+//
+@import "../../styles/variables.scss";
+
+.btn-auth {
+	display: inline-block;
+	line-height: 0px;
+	height: auto;
+
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+
+	&__btn {
+		padding: 20px 10px;
+		width: 45px;
+		height: 65px;
+		background-color: transparent;
+
+		.btn-auth__image {
+			fill: #444;
+			// fill: $color_green;
+		}
+
+		&:hover,
+		&:active {
+			.btn-auth__image {
+				// fill: #444 !important;
+				fill: $color_green;
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		&__btn {
+			&:hover {
+				.btn-auth__image {
+					fill: #444 !important;
+				}
+			}
+		}
+	}
+}

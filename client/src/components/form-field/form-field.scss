@@ -1,0 +1,54 @@
+//
+@import "../../styles/variables.scss";
+
+.form-field {
+	&__title {
+		display: block;
+		font-size: 15px;
+		margin-bottom: 0.4em;
+		letter-spacing: 0.4px;
+		font-weight: 300;
+		// color: #444 !important;
+	}
+
+	&__input {
+		margin: 0 0 3px;
+		padding: 11px 12px;
+		background-color: #fff;
+		border: 1px solid #e6e6e6;
+		// border: 1px solid #eadae4;
+		border-radius: 6px;
+		outline: none;
+		width: 100%;
+		transition: all 0.3s ease;
+		font-size: 15px;
+		font-weight: 300;
+		letter-spacing: 0.4px;
+		// color: #444 !important;
+		color: #222 !important;
+		overflow: hidden;
+
+		&:hover {
+			box-shadow: 0 0 3px #cccccc;
+		}
+
+		&::placeholder {
+			font-size: 1.2em;
+			font-weight: lighter;
+			color: #bbb;
+		}
+
+		// &.auth-form__error {
+		// 	border: 1px solid #eadae4;
+		// }
+
+		&_error {
+			border: 1px solid $color_error;
+		}
+	}
+
+	&__error {
+		font-size: 0.9em;
+		color: $color_error;
+	}
+}

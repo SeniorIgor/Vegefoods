@@ -1,0 +1,44 @@
+//
+
+@import "./../../styles/variables.scss";
+
+.category-list {
+	padding: 90px 0 48px;
+
+	&__wrapper {
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	&__btn {
+		padding: 5px 20px;
+		margin-bottom: 8px;
+		min-width: 120px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22px;
+		border-radius: 5px;
+		color: $color_green;
+		background-color: transparent;
+
+		&.active {
+			color: $color_white;
+			background-color: $color_green;
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding: 60px 0 35px;
+	}
+
+	@media (max-width: 500px) {
+		padding: 40px 0 35px;
+	}
+
+	@media (max-width: 360px) {
+		&__wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+}

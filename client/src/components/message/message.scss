@@ -1,0 +1,37 @@
+//
+@import "../../styles/variables.scss";
+
+.message {
+	position: relative;
+	padding: 9px 10px 9px 43px;
+	line-height: 40px;
+	margin-bottom: 14px;
+	font-size: 16px;
+	line-height: 24px;
+	color: $color_green;
+	border: 1px solid $color_green;
+	border-radius: 6px;
+	background-size: 23px;
+	background-position: 8px center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+	&_error {
+		color: $color_error;
+		border: 1px solid $color_error;
+	}
+
+	&__image {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		top: 0;
+		left: 10px;
+
+		& svg {
+			margin-top: -1px;
+		}
+	}
+}

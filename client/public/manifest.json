@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Vegefoods",
+	"short_name": "Vegefoods",
+	"lang": "ru",
+	"icons": [
+		{
+			"src": "favicon.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#96c15b",
+	"description": "Vegefoods online store of healthy food."
+}

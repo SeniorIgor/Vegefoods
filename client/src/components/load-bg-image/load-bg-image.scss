@@ -1,0 +1,24 @@
+.load-bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: blur(10px);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	-webkit-transition: filter 150ms;
+	-moz-transition: filter 150ms;
+	-ms-transition: filter 150ms;
+	transition: filter 150ms;
+
+	&_active {
+		filter: blur(0);
+	}
+
+	&__mock-image {
+		display: none;
+	}
+}

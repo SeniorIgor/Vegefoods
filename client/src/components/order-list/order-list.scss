@@ -1,0 +1,17 @@
+//
+@import "../../styles/variables.scss";
+
+.order-list {
+	padding: 90px 0;
+
+	&__wrap {
+	}
+
+	&__item {
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: 400px) {
+		padding: 60px 0;
+	}
+}

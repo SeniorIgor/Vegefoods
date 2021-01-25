@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`APP:  snapshot 1`] = `
+<div
+  className="app"
+>
+  <Component />
+  <Component />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/catalog/:category/page/:pageId"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/product/:productId"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/cart"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/favorites"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/contacts"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/orders"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
+  <Newsletter />
+  <Footer />
+</div>
+`;
