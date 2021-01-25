@@ -8,8 +8,8 @@
 # client node_modules
 /package-lock.json
 
-# config for dev exclude only Heroku
-config/config.dev.js
+# config for dev exclude only hosting
+# config/config.dev.js
 
-# config for default prod exclude only Heroku
-config/default.prod.js
+# config for default prod exclude only hosting
+# config/default.prod.js

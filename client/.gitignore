@@ -2,15 +2,15 @@
 *.psd
 *.fig
 
-# tests exclude only Heroku
-*spec.js
-*.spec.js
-*.snap
-*/__snapshots__
+# tests exclude only hosting
+# *spec.js
+# *.spec.js
+# *.snap
+# */__snapshots__
 
 # node_modules
 /node_modules/*
 /package-lock.json
 
-# dist include only Heroku
-# /dist/*
+# dist include only hosting
+/dist/*
