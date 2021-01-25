@@ -2,11 +2,13 @@
 *.psd
 *.fig
 
+# tests
+*.snap
+*/__snapshots__
+
 # tests exclude only hosting
 # *spec.js
 # *.spec.js
-# *.snap
-# */__snapshots__
 
 # node_modules
 /node_modules/*
