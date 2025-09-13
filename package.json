@@ -18,20 +18,20 @@
 	"author": "Igor <igor.tyapkin1996@yandex.ru>",
 	"license": "ISC",
 	"dependencies": {
-		"bcryptjs": "^2.4.3",
-		"compression": "^1.7.4",
-		"config": "^3.3.3",
-		"cors": "^2.8.5",
-		"cross-env": "^7.0.3",
-		"express": "^4.17.1",
-		"express-validator": "^6.6.1",
-		"helmet": "^4.3.1",
-		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^5.10.13"
+		"bcryptjs": "2.4.3",
+		"compression": "1.7.4",
+		"config": "3.3.3",
+		"cors": "2.8.5",
+		"cross-env": "7.0.3",
+		"express": "4.17.1",
+		"express-validator": "6.6.1",
+		"helmet": "4.3.1",
+		"jsonwebtoken": "8.5.1",
+		"mongoose": "5.10.13"
 	},
 	"devDependencies": {
-		"@types/jest": "^26.0.19",
-		"concurrently": "^5.3.0",
-		"nodemon": "^2.0.6"
+		"@types/jest": "26.0.19",
+		"concurrently": "5.3.0",
+		"nodemon": "2.0.6"
 	}
 }
