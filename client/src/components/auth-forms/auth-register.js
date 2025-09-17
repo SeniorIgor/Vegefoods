@@ -37,13 +37,17 @@ const AuthRegister = (props) => {
 
 	return (
 		<div className="auth">
-			<h1 className="auth__title">Регистрация</h1>
+			<h1 className="auth__title">Register</h1>
 			{messageView}
 			<div className="auth__form form">
 				{fieldsView}
 
-				<button className="btn_order form__btn-submit"
-					onClick={registerUser}>Зарегистрироваться</button>
+				<button
+					className="btn_order form__btn-submit"
+					onClick={registerUser}
+				>
+					Sign Up
+				</button>
 			</div>
 		</div>
 	);

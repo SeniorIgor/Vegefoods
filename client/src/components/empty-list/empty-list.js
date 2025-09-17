@@ -18,7 +18,7 @@ const EmptyList = ({ title, text, imageUrl, previewUrl }) => {
 					{/* <img src={image} className="empty-favorites__image" /> */}
 					<h2 className="empty-favorites__title">{title}</h2>
 					<span className="empty-favorites__text">{text}</span>
-					<Link to="/catalog/all/page/1" className="btn_order empty-favorites__btn">Начать покупки</Link>
+					<Link to="/catalog/all/page/1" className="btn_order empty-favorites__btn">Start Shopping</Link>
 				</div>
 			</div>
 		</div>

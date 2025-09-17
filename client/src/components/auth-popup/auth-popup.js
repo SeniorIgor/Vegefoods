@@ -30,19 +30,25 @@ export default class AuthPopup extends Component {
 			<div className={classNames} onClick={this.onClosePopup}>
 				<div className="auth-overlay__wrapper">
 					<div className="auth-overlay__popup">
-						<button className="auth-overlay__close-btn"
-							onClick={this.props.onClose}></button>
+						<button
+							className="auth-overlay__close-btn"
+							onClick={this.props.onClose}
+						></button>
 						<div className="auth-overlay__toggle-wrap">
-							<div className={classLogin}
-								onClick={() => this.onSelectForm(true)}>
-								Вход
+							<div
+								className={classLogin}
+								onClick={() => this.onSelectForm(true)}
+							>
+								Login
+							</div>
+							<div
+								className={classRegister}
+								onClick={() => this.onSelectForm(false)}
+							>
+								Register
+							</div>
 						</div>
-							<div className={classRegister}
-								onClick={() => this.onSelectForm(false)}>
-								Регистрация
-						</div>
-						</div>
-						{(isLogin) ? <AuthLoginContainer /> : <AuthRegisterContainer />}
+						{isLogin ? <AuthLoginContainer /> : <AuthRegisterContainer />}
 					</div>
 				</div>
 			</div>

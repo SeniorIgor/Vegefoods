@@ -15,7 +15,7 @@ const headerContacts = (
 			<div className="header__contacts-wrapper">
 				<a className="header__tel" href="tel:+77777777777">+7 (777) 777-77-77</a>
 				<a className="header__mail" href="mailto:email@email.com">email@email.com</a>
-				<span className="header__delivery">доставка 3-5 рабочих дней и бесплатный возврат</span>
+				<span className="header__delivery">3–5 business days delivery & free returns</span>
 			</div>
 		</div>
 	</div>

@@ -51,25 +51,27 @@ export default class Newsletter extends Component {
 		}
 
 		return (
-			<div className="newsletter" >
+			<div className="newsletter">
 				<div className="container">
 					<div className="newsletter__wrapper">
 						<div className="newsletter__column">
-							<h2 className="newsletter__title">Подпишитесь на нашу рассылку</h2>
-							<p className="newsletter__text">Получайте по электронной почте обновления о наших последних акциях и специальных предложениях</p>
+							<h2 className="newsletter__title">Subscribe to our Newsletter</h2>
+							<p className="newsletter__text">
+								Get email updates about our latest promotions and special offers
+							</p>
 						</div>
 						<div className="newsletter__column">
-							<form className="newsletter__form"
-								onSubmit={this.onSubmit}>
+							<form className="newsletter__form" onSubmit={this.onSubmit}>
 								<div className="newsletter__field-wrapper">
 									<input
 										type="text"
 										className={inputClassNames}
 										onChange={this.onLabelChange}
 										value={this.state.label}
-										placeholder="Введите ваш Email" />
+										placeholder="Enter your Email"
+									/>
 									<button className="newsletter__btn">
-										Подписаться
+										Subscribe
 									</button>
 								</div>
 							</form>

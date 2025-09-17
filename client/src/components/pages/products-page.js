@@ -5,8 +5,8 @@ import { ProductListContainer, CategoryListContainer, PaginationContainer } from
 import RatingStars from './../rating-stars';
 
 const titleViewData = {
-	title: "Каталог товаров",
-	text: "Товары для дома"
+	title: "Product Catalog",
+	text: "Home Goods"
 };
 
 const ProductsPage = () => {

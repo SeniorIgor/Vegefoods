@@ -44,20 +44,20 @@ const Ordering = (props) => {
 					{fieldsView}
 					<div className="ordering__date-wrap">
 						<div className="ordering__date-field">
-							<div className="ordering__field-title">Дата доставки</div>
+							<div className="ordering__field-title">Delivery Date</div>
 							<DropdownMenu
 								data={dateList}
 								onSelected={(value) => updateValue('date', value)}
-								defaultValue='Дата доставки'
+								defaultValue='Delivery Date'
 								selectedItem={date}
 								isFormField={true} />
 						</div>
 						<div className="ordering__date-field">
-							<div className="ordering__field-title">Время доставки</div>
+							<div className="ordering__field-title">Delivery Time</div>
 							<DropdownMenu
 								data={timeList}
 								onSelected={(value) => updateValue('time', value)}
-								defaultValue='Время доставки'
+								defaultValue='Delivery Time'
 								selectedItem={time}
 								isFormField={true} />
 						</div>

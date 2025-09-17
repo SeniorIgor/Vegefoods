@@ -1,6 +1,6 @@
 # Vegefoods
 
-Vegefoods is an online shop for healthy foods, built with **React + Redux** on the frontend, and **Node.js + Express** + **MongoDB** on the backend. The app provides a full product catalog, user authentication, and an API for managing products and orders.
+Vegefoods is an online shop for healthy foods, built with **React + Redux** on the frontend, and **Node.js + Express** + **MongoDB** on the backend. The app provides a full product catalog, user authentication, a shopping cart, and an API for managing products and orders.
 
 **Live Demo:** https://vegefoods.herokuapp.com/
 
@@ -43,7 +43,7 @@ server/             # Express backend (routes, models, controllers)
 models/             # Mongoose schemas (Product, User, Order, etc.)
 routes/             # API endpoints
 config/             # Environment config, DB connection
-middleware/         # Authentication, error‑handling
+middleware/         # Authentication, error-handling
 app.js / index.js   # Server entry point
 ```
 
@@ -59,10 +59,12 @@ npm run app:install
 
 # set environment variables
 # e.g.
-# MONGODB_URI=your_mongo_connection_string
+# MONGO_URI=your_mongo_connection_string
+# BASE_URL
 # JWT_SECRET=your_jwt_secret
 # NODE_ENV=production (or development)
-# PORT=5000
+# PORT=5001
+# CATEGORY_ALL
 
 # run in dev mode (frontend + backend)
 npm run dev
@@ -85,10 +87,10 @@ npm start
 
 ## Learning Outcomes
 
-- Built a full MERN‑stack application integrating React frontend with a MongoDB backend using Express.
+- Built a full MERN-stack application integrating React frontend with a MongoDB backend using Express.
 - Designed and managed global state using Redux (actions, reducers), and handled async API calls.
 - Implemented secure user auth (JWT), route protection, and proper separation of concerns.
-- Learned to deploy a full‑stack app (serving both frontend and backend from one server) and work with environment configuration.
+- Learned to deploy a full-stack app (serving both frontend and backend from one server) and work with environment configuration.
 - Gained experience in designing RESTful APIs, error handling, and database schema design.
 
 ---
