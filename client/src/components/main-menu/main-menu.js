@@ -26,7 +26,7 @@ const menuContacts = (
 						<svg height="25" viewBox="0 0 24 24" width="25" fill="#043e44" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 19h-2a.5.5 0 010-1h2a.5.5 0 010 1zM22.75 19H21.5a.5.5 0 010-1h.835l.674-3.592C23 12.57 21.43 11 19.5 11h-3.283l-1.591 7H17.5a.5.5 0 010 1H14a.5.5 0 01-.488-.61l1.818-8a.5.5 0 01.488-.39H19.5c2.481 0 4.5 2.019 4.5 4.5l-.759 4.092a.499.499 0 01-.491.408z" /><path d="M19.5 21c-1.378 0-2.5-1.121-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.121 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5zM8.5 21C7.122 21 6 19.879 6 18.5S7.122 16 8.5 16s2.5 1.121 2.5 2.5S9.878 21 8.5 21zm0-4c-.827 0-1.5.673-1.5 1.5S7.673 20 8.5 20s1.5-.673 1.5-1.5S9.327 17 8.5 17zM6.5 10h-4a.5.5 0 010-1h4a.5.5 0 010 1zM6.5 13h-5a.5.5 0 010-1h5a.5.5 0 010 1zM6.5 16h-6a.5.5 0 010-1h6a.5.5 0 010 1z" /><path d="M14 19h-3.5a.5.5 0 010-1h3.101l2.272-10H4.5a.5.5 0 010-1h12a.5.5 0 01.488.61l-2.5 11A.5.5 0 0114 19z" /></svg>
 					</div>
 					{/* <img src={delivery} className="menu-contacts__link-image" /> */}
-					<span className="menu-contacts__link-text">доставка 3-5 рабочих дней и бесплатный возврат</span>
+					<span className="menu-contacts__link-text">3–5 business days delivery & free returns</span>
 				</div>
 			</div>
 		</div>
@@ -52,35 +52,33 @@ const MainMenu = ({ isActive, handler, isAuth }) => {
 				<div className="container">
 					<ul className="main-menu__list" onClick={(e) => onCloseMenu(e)}>
 						<li className="main-menu__item">
-							<NavLink to="/" className="main-menu__link" data-menu>Главная</NavLink>
+							<NavLink to="/" className="main-menu__link" data-menu>Home</NavLink>
 						</li>
 						<li className="main-menu__item">
-							<NavLink to="/catalog/all/page/1" className="main-menu__link" data-menu>Каталог товаров</NavLink>
+							<NavLink to="/catalog/all/page/1" className="main-menu__link" data-menu>Product Catalog</NavLink>
 						</li>
 						<li className="main-menu__item">
-							<NavLink to="/cart" className="main-menu__link" data-menu>Корзина</NavLink>
+							<NavLink to="/cart" className="main-menu__link" data-menu>Cart</NavLink>
 						</li>
 						<li className="main-menu__item">
-							<NavLink to="/favorites" className="main-menu__link" data-menu>Избранное</NavLink>
+							<NavLink to="/favorites" className="main-menu__link" data-menu>Favorites</NavLink>
 						</li>
-						{
-							(isAuth) ? (
-								<li className="main-menu__item">
-									<NavLink to="/orders" className="main-menu__link" data-menu>История заказов</NavLink>
-								</li>
-							) : null
-						}
+						{isAuth ? (
+							<li className="main-menu__item">
+								<NavLink to="/orders" className="main-menu__link" data-menu>Order History</NavLink>
+							</li>
+						) : null}
 						{/* <li className="main-menu__item">
-							<NavLink to="/about" className="main-menu__link" data-menu>О нас (не реализовано)</NavLink>
+							<NavLink to="/about" className="main-menu__link" data-menu>About Us (not implemented)</NavLink>
 						</li>
 						<li className="main-menu__item">
-							<NavLink to="/blog" className="main-menu__link" data-menu>Блог (не реализовано)</NavLink>
+							<NavLink to="/blog" className="main-menu__link" data-menu>Blog (not implemented)</NavLink>
 						</li> */}
 						<li className="main-menu__item">
-							<NavLink to="/contacts" className="main-menu__link" data-menu>Контакты</NavLink>
+							<NavLink to="/contacts" className="main-menu__link" data-menu>Contacts</NavLink>
 						</li>
 						{/* <li className="main-menu__item">
-							<NavLink to="/ordering" className="main-menu__link" data-menu>Оформление заказа</NavLink>
+							<NavLink to="/ordering" className="main-menu__link" data-menu>Checkout</NavLink>
 						</li> */}
 					</ul>
 				</div>

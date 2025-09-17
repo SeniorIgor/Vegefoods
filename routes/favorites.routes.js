@@ -33,32 +33,32 @@ async function mapFavoritesItems(items) {
 }
 
 router.get('/', auth, async (req, res) => {
-	try {
-		const user = await User.findById(req.user.userId);
-		const favoritesItems = await mapFavoritesItems(user.favorites.items);
+  try {
+    const user = await User.findById(req.user.userId);
+    const favoritesItems = await mapFavoritesItems(user.favorites.items);
 
-		res.json({ favoritesItems });
+    res.json({ favoritesItems });
 
-	} catch (err) {
-		res.status(500).json({
-			message: 'Что-то пошло не так, попробуйте снова'
-		})
-	}
-})
+  } catch (err) {
+    res.status(500).json({
+      message: 'Something went wrong, please try again'
+    });
+  }
+});
 
 router.post('/update', auth, async (req, res) => {
-	try {
-		const user = await User.findById(req.user.userId);
-		await user.updateFavorites(req.body.productId);
-		const favoritesItems = await mapFavoritesItems(user.favorites.items);
+  try {
+    const user = await User.findById(req.user.userId);
+    await user.updateFavorites(req.body.productId);
+    const favoritesItems = await mapFavoritesItems(user.favorites.items);
 
-		res.json({ favoritesItems });
-		
-	} catch (err) {
-		res.status(500).json({
-			message: 'Что-то пошло не так, попробуйте снова'
-		})
-	}
-})
+    res.json({ favoritesItems });
+    
+  } catch (err) {
+    res.status(500).json({
+      message: 'Something went wrong, please try again'
+    });
+  }
+});
 
 module.exports = router;

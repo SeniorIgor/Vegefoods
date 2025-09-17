@@ -46,15 +46,15 @@ module.exports = (env = {}) => {
 		devServer: {
 			proxy: {
 				"/api/*": {
-					target: "http://localhost:5000/",
+					target: "http://localhost:5001/",
 					secure: "false"
 				},
 				"/images/*": {
-					target: "http://localhost:5000/",
+					target: "http://localhost:5001/",
 					secure: "false"
 				},
 				// "/users": {
-				// 	target: "http://localhost:5000/",
+				// 	target: "http://localhost:5001/",
 				// 	secure: "false"
 				// }
 			},

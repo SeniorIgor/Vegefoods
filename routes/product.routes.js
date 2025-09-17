@@ -21,7 +21,7 @@ router.get('/:productId', async (req, res) => {
 
 	} catch (err) {
 		res.status(500).json({
-			message: 'Что-то пошло не так, попробуйте снова'
+			message: 'Something went wrong, please try again'
 		})
 	}
 })

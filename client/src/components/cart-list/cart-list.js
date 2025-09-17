@@ -18,11 +18,11 @@ const CartList = ({ items, orderTotal }) => {
 					<ProductCards items={items} />
 				</div>
 				<div className="cart-list__total-wrap">
-					<p className="cart-list__total-text">Итого к оплате:</p>
+					<p className="cart-list__total-text">Total to Pay:</p>
 					<p className="cart-list__total-price">{formatPrice(orderTotal)}</p>
 				</div>
 				<div className="cart-list__btn-wrap">
-					<Link to="/ordering" className="btn_order">Оформить заказ</Link>
+					<Link to="/ordering" className="btn_order">Checkout</Link>
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,8 @@
 *.psd
 *.fig
 
+# env
+.env
 # node_modules
 /node_modules/*
 
@@ -13,3 +15,5 @@
 
 # config for default prod exclude only hosting
 # config/default.prod.js
+
+.DS_Store

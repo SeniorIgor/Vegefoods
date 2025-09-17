@@ -1,4 +1,4 @@
 export const orderingTitleViewData = {
-	title: "Оформление заказа",
-	text: "Полезные продукты"
+	title: "Checkout",
+  text: "Healthy products"
 };

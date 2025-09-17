@@ -19,51 +19,51 @@ export const footerSocialData = [
 ];
 
 export const footerNavMenuData = [
-	{
-		id: 1,
-		title: 'Продукты'
-	},
-	{
-		id: 2,
-		title: 'О нас'
-	},
-	{
-		id: 3,
-		title: 'Блог'
-	},
-	{
-		id: 4,
-		title: 'Контакты'
-	}
+  {
+    id: 1,
+    title: "Products",
+  },
+  {
+    id: 2,
+    title: "About Us",
+  },
+  {
+    id: 3,
+    title: "Blog",
+  },
+  {
+    id: 4,
+    title: "Contacts",
+  },
 ];
 
 export const footerUserMenuData = [
-	{
-		id: 1,
-		title: 'Доставка'
-	},
-	{
-		id: 2,
-		title: 'Обмен и возврат'
-	},
-	{
-		id: 3,
-		title: 'Условия и положения'
-	},
-	{
-		id: 4,
-		title: 'Политика конфиденциальности'
-	},
-	{
-		id: 5,
-		title: 'Часто задаваемые вопросы'
-	},
+  {
+    id: 1,
+    title: "Delivery",
+  },
+  {
+    id: 2,
+    title: "Exchange & Returns",
+  },
+  {
+    id: 3,
+    title: "Terms & Conditions",
+  },
+  {
+    id: 4,
+    title: "Privacy Policy",
+  },
+  {
+    id: 5,
+    title: "FAQ",
+  },
 ];
 
 export const footerContactsData = [
 	{
 		id: 1,
-		title: 'Москва, ул. Садовническая, д. 82, стр. 2',
+		title: "Moscow, Sadovnicheskaya St., 82, Bldg. 2",
 		image: <svg width="20" height="25" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z" /></g></svg>,
 	},
 	{

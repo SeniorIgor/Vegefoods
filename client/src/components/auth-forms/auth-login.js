@@ -40,18 +40,21 @@ const AuthLogin = (props) => {
 
 	return (
 		<div className="auth">
-			<h1 className="auth__title">Войти на сайт</h1>
+			<h1 className="auth__title">Log In</h1>
 			{messageView}
 			<div className="auth__form form">
 				{fieldsView}
 
 				<div className="form__reset-wrap">
-					<a className="form__reset-btn" href="#">Забыли пароль?</a>
+					<a className="form__reset-btn" href="#">Forgot password?</a>
 				</div>
 
 				<button
 					className="btn_order form__btn-submit"
-					onClick={loginUser}>Войти</button>
+					onClick={loginUser}
+				>
+					Log In
+				</button>
 			</div>
 		</div>
 	);

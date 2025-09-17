@@ -10,16 +10,16 @@ const validateForm = (errors) => {
 }
 
 const fieldLengthError = (value, fieldName, length) => {
-	if (value && value.length >= length) return '';
+  if (value && value.length >= length) return '';
 
-	return `${fieldName[0].toUpperCase() + fieldName.slice(1)
-		} должен содержать не менее ${length} ${length === 1 ? 'символа' : 'символов'
-		}`;
-}
+  return `${fieldName[0].toUpperCase() + fieldName.slice(1)
+    } must contain at least ${length} ${length === 1 ? 'character' : 'characters'
+  }`;
+};
 
-const emailError = (value) => validEmailRegex.test(value) ? '' : 'Неверный Email!';
+const emailError = (value) => validEmailRegex.test(value) ? '' : 'Invalid Email!';
 
-const confirmError = (value, password) => password !== value ? 'Пароли должны совпадать!' : '';
+const confirmError = (value, password) => password !== value ? 'Passwords must match!' : '';
 
 export {
 	validEmailRegex,

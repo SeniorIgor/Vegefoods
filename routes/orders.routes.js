@@ -38,25 +38,25 @@ async function mapOrderItems(items) {
 }
 
 router.get('/', auth, async (req, res) => {
-	try {
-		const user = await User.findById(req.user.userId);
-		const statusesMap = {};
+  try {
+    const user = await User.findById(req.user.userId);
+    const statusesMap = {};
 
-		(await Status.find()).forEach((status) => {
-			statusesMap[status.orderPeriod] = status._id;
-		});
+    (await Status.find()).forEach((status) => {
+      statusesMap[status.orderPeriod] = status._id;
+    });
 
-		await user.updateOrdersStatus(statusesMap);
+    await user.updateOrdersStatus(statusesMap);
 
-		const orders = await mapOrderItems(user.orders.items);
+    const orders = await mapOrderItems(user.orders.items);
 
-		res.json(orders);
+    res.json(orders);
 
-	} catch (err) {
-		res.status(500).json({
-			message: 'Что-то пошло не так, попробуйте снова'
-		})
-	}
+  } catch (err) {
+    res.status(500).json({
+      message: 'Something went wrong, please try again'
+    });
+  }
 })
 
 module.exports = router;

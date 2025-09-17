@@ -7,8 +7,8 @@ import './title-view.scss';
 
 const data = {
 	id: 1,
-	title: 'Мы предлагаем свежие фрукты и овощи',
-	text: 'Мы доставляем натуральные овощи и фрукты',
+	title: "Fresh Fruits & Vegetables",
+  text: "Delivered farm-fresh and natural, straight to your door",
 	// imageUrl: '/images/design-min.jpg',
 	// previewUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAMAAAAYGszCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADbUExURe/w7/f49+Pj4evr6/X19fHw8e3t7PT08/Ly8vb29+7u7ufn5u3u6eDg3dra18/PydXVzdra2ujl0rKyr+vq6b/Av9bW0+3s3+fn4ebcyc/Kwr+4s+Xj27ayrpeXlezmxvDq1auqou/jvlNTUPPUa+7Vi9/WzcyFf7acrNzAt+CxnuPgvdPMe/DMuvZyTWhBSd3VpM/LsqhtesjDm3FxbszKpOzMtcvEvuHCpoltTmNgW7VhUN/LmMCimLOkq86/rMWXiO7EUt/OvKN0lIxKR56dm+Dd2MO0re6Kb+WNKU8AAAAJcEhZcwAAAAEAAAABAE8lxNYAAADgSURBVBjTJczXloQgEEXRKwqogBGzdu7pMDnnHP//iwaW5632qipE4NxzHMfjTsF8CqZJBAKeCoNMBR7nAIvTGC71uRcETmCNAm4+KRCC2nvPEKcUIdNFCQb43BZw89EiSaEBOqpvkTFhMaSg1IBpXFQRhBsuZhgLXdHcEFWC6MV6NTtGNa3Atp8fd9dxiSvSNNP6RB4eZS572T693w8JlsnluThVMjtLhI5+16vXdoko6dqLTldZv9npv6+D3dvzA+J8mJNaZn0ttNzvk5/N4y3aSW4mOSdS5kp9993Qxv9jNBMDIs948QAAAABJRU5ErkJggg==',
 	imageUrl: '/images/bg_1.jpg',

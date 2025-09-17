@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const config = require('./config');
 const path = require('path');
@@ -6,10 +8,14 @@ const helmet = require('helmet');
 const compression = require('compression');
 const cors = require('cors');
 
+
 const app = express();
 
-app.use(express.json({ exended: true }));
+// Body parser
+app.use(express.json({ extended: true }));
 
+// Security headers (Helmet)
+app.use(helmet());
 app.use(helmet.contentSecurityPolicy({
 	directives: {
 		defaultSrc: ["'self'", "https://yandex.ru *.yandex.ru", "https://yandex.net *.yandex.net", "https://yastatic.net *.yastatic.net"],
@@ -18,11 +24,23 @@ app.use(helmet.contentSecurityPolicy({
 		styleSrc: ["'self' https: 'unsafe-inline'"],
 	},
 }));
+
+
+// Compression
 app.use(compression());
 
+// Static files
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-app.use(cors({ origin: "http://localhost:4200" }));
+// CORS
+app.use(
+  cors({
+    origin: 'http://localhost:4200',
+    credentials: true,
+  })
+);
+
+// API routes
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/product', require('./routes/product.routes'));
 app.use('/api/products', require('./routes/products.routes'));
@@ -33,34 +51,56 @@ app.use('/api/profile', require('./routes/profile.routes'));
 app.use('/api/order', require('./routes/order.routes'));
 app.use('/api/orders', require('./routes/orders.routes'));
 
+// Health check
+app.get('/healthz', (_req, res) => res.status(200).send('ok'));
+
 if (process.env.NODE_ENV === 'production') {
 	app.use('/', express.static(path.join(__dirname, 'client', 'dist')));
-
-	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
-	})
+  app.get('*', (_req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
+	});
 }
 
-const PORT = config.PORT || 5000;
+const PORT = config.PORT || 5001;
+
+if (!config.MONGO_URI) {
+  console.error('❌ Missing MONGO_URI in .env file');
+  process.exit(1);
+}
 
 async function start() {
-	try {
-		await mongoose.connect(config.MONGO_URI, {
+  try {
+    // Mongoose v6+ needs no extra options
+    await mongoose.connect(config.MONGO_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
-			useCreateIndex: true
+			useCreateIndex: true,
+			useFindAndModify: false
 		});
 
-		app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`));
+    const server = app.listen(PORT, () =>
+      console.log(`App started on port ${PORT}…`)
+    );
 
-	} catch (err) {
-		console.log('Server error', err.message);
-		process.exit(1);
-	}
+    // graceful shutdown
+    const shutdown = (sig) => {
+      console.log(`${sig} received. Closing server…`);
+      server.close(() => {
+        mongoose.connection.close(false).then(() => {
+          console.log('Mongo connection closed. Bye!');
+          process.exit(0);
+        });
+      });
+    };
+    process.on('SIGINT', () => shutdown('SIGINT'));
+    process.on('SIGTERM', () => shutdown('SIGTERM'));
+  } catch (err) {
+    console.error('Server error:', err);
+    process.exit(1);
+  }
 }
 
 start();
-
 
 // "client:install": "npm install --prefix client",
 // "client:build": "npm run build --prefix client",

@@ -23,23 +23,23 @@ const getDeliveryDates = (earlyDate) => {
 };
 
 const getDeliveryTime = () => {
-	return [
-		{
-			id: 1,
-			value: 8 * ONE_HOUR,
-			name: 'с 8:00 до 13:00',
-		},
-		{
-			id: 2,
-			value: 13 * ONE_HOUR,
-			name: 'с 13:00 до 18:00',
-		},
-		{
-			id: 3,
-			value: 18 * ONE_HOUR,
-			name: 'с 18:00 до 23:00',
-		}
-	]
+  return [
+    {
+      id: 1,
+      value: 8 * ONE_HOUR,
+      name: 'from 8:00 to 13:00',
+    },
+    {
+      id: 2,
+      value: 13 * ONE_HOUR,
+      name: 'from 13:00 to 18:00',
+    },
+    {
+      id: 3,
+      value: 18 * ONE_HOUR,
+      name: 'from 18:00 to 23:00',
+    }
+  ];
 };
 
 const formatPrice = (number) => {
@@ -67,7 +67,7 @@ const formatNumber = (number) => {
 const getWeekDay = (miliseconds) => {
 	const date = new Date(miliseconds);
 
-	let days = ['воскресенье', 'понедельние', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+	let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 	return days[date.getDay()];
 }
@@ -111,19 +111,14 @@ const formatPhoneNumber = (value) => {
 	switch (true) {
 		case (value.length === 1):
 			return `${result}${value} `;
-			break;
 		case (value.length > 0 && value.length < 5):
 			return `${result}${value.slice(0, 1)} (${value.slice(1)}`;
-			break;
 		case (value.length > 4 && value.length < 8):
 			return `${result}${value.slice(0, 1)} (${value.slice(1, 4)}) ${value.slice(4)}`;
-			break;
 		case (value.length > 7 && value.length < 10):
 			return `${result}${value.slice(0, 1)} (${value.slice(1, 4)}) ${value.slice(4, 7)}-${value.slice(7)}`;
-			break;
 		case (value.length > 9):
 			return `${result}${value.slice(0, 1)} (${value.slice(1, 4)}) ${value.slice(4, 7)}-${value.slice(7, 9)}-${value.slice(9)}`;
-			break;
 		default:
 			break;
 	}

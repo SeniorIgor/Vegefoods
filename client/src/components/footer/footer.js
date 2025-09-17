@@ -51,43 +51,43 @@ const Footer = () => {
 
 	return (
 		<div className="footer">
-			<div className="container">
-				<div className="footer__wrapper">
+    <div className="container">
+      <div className="footer__wrapper">
 
-					<div className="footer__column">
-						<h2 className="footer__title">Vegefoods</h2>
-						<p className="footer__text">
-							2005-2020 © Vegefoods — крупнейший интернет-магазин полезных продуктов. Все права защищены. Доставка по всей России.
-						</p>
-						<ul className="footer__social social">
-							{social}
-						</ul>
-					</div>
+        <div className="footer__column">
+          <h2 className="footer__title">Vegefoods</h2>
+          <p className="footer__text">
+            2020–2025 © Vegefoods — the largest online store for healthy foods. All rights reserved. Nationwide delivery across Russia.
+          </p>
+          <ul className="footer__social social">
+            {social}
+          </ul>
+        </div>
 
-					<div className="footer__column">
-						<h2 className="footer__title">Меню</h2>
-						<ul className="footer__menu user-menu">
-							{navMenu}
-						</ul>
-					</div>
+        <div className="footer__column">
+          <h2 className="footer__title">Menu</h2>
+          <ul className="footer__menu user-menu">
+            {navMenu}
+          </ul>
+        </div>
 
-					<div className="footer__column">
-						<h2 className="footer__title">Помощь</h2>
-						<ul className="footer__menu user-menu">
-							{userMenu}
-						</ul>
-					</div>
+        <div className="footer__column">
+          <h2 className="footer__title">Help</h2>
+          <ul className="footer__menu user-menu">
+            {userMenu}
+          </ul>
+        </div>
 
-					<div className="footer__column">
-						<h2 className="footer__title">Остались вопросы?</h2>
-						<ul className="footer__contacts footer-contacts">
-							{contacts}
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+        <div className="footer__column">
+          <h2 className="footer__title">Have questions?</h2>
+          <ul className="footer__contacts footer-contacts">
+            {contacts}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 }
 
 export default Footer;
