@@ -68,8 +68,7 @@ npm run app:install
 npm run dev
 
 # build for production
-RUN npm install
-RUN npm run client:install
+npm run app:install
 RUN npm run client:build
 RUN npm start
 ```
