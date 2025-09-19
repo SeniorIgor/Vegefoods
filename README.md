@@ -2,7 +2,7 @@
 
 Vegefoods is an online shop for healthy foods, built with **React + Redux** on the frontend, and **Node.js + Express** + **MongoDB** on the backend. The app provides a full product catalog, user authentication, a shopping cart, and an API for managing products and orders.
 
-**Live Demo:** https://vegefoods.herokuapp.com/
+**Live Demo:** https://vegefoods-5uto.onrender.com/
 
 ---
 
