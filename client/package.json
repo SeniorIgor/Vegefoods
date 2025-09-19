@@ -8,8 +8,8 @@
 		"npm": "6.x"
 	},
 	"scripts": {
-		"dev": "npx webpack",
-		"build": "npx webpack --env.mode=production",
+		"dev": "webpack",
+		"build": "webpack --env.mode=production",
 		"start": "webpack-dev-server",
 		"test": "jest",
 		"test:react-scripts": "react-scripts test",
