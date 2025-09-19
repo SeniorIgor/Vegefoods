@@ -4,9 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"engines": {
-    "node": "14.x",
-    "npm": "6.x"
-  },
+		"node": "14.x",
+		"npm": "6.x"
+	},
 	"scripts": {
 		"start": "cross-env NODE_ENV=production node app.js",
 		"server": "nodemon app.js",
@@ -15,7 +15,7 @@
 		"client:build": "cd client && npm run build",
 		"app:install": "npm install && npm run client:install",
 		"app:start": "npm run client:build && npm start",
-		"heroku-postbuild": "cd client && npm install",
+		"heroku-postbuild": "npm run app:install && npm run client:build",
 		"dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
 	},
 	"keywords": [],

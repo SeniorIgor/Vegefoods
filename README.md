@@ -2,7 +2,7 @@
 
 Vegefoods is an online shop for healthy foods, built with **React + Redux** on the frontend, and **Node.js + Express** + **MongoDB** on the backend. The app provides a full product catalog, user authentication, a shopping cart, and an API for managing products and orders.
 
-**Live Demo:** https://vegefoods.herokuapp.com/
+**Live Demo:** https://vegefoods-5uto.onrender.com/
 
 ---
 
@@ -58,20 +58,19 @@ app.js / index.js   # Server entry point
 npm run app:install
 
 # set environment variables
-# e.g.
-# MONGO_URI=your_mongo_connection_string
-# BASE_URL
-# JWT_SECRET=your_jwt_secret
-# NODE_ENV=production (or development)
 # PORT=5001
-# CATEGORY_ALL
+# JWT_SECRET=super_secret_string
+# MONGO_URI=mongodb+srv://<USER>:<PASS>@<HOST>/<DBNAME>?retryWrites=true&w=majority&appName=Cluster0
+# BASE_URL=http://localhost:5001
+# CATEGORY_ALL=all
 
 # run in dev mode (frontend + backend)
 npm run dev
 
 # build for production
-npm run build
-npm start
+npm run app:install
+RUN npm run client:build
+RUN npm start
 ```
 
 ---
