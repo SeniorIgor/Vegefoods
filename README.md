@@ -8,6 +8,8 @@ Vegefoods is an online shop for healthy foods, built with **React + Redux** on t
 
 > ⚠️ Note: The demo runs on a free tier service. If it has been idle, it may take up to a minute to wake up on first load.
 
+![Catalog Page](screenshots/catalog.webp)
+
 ---
 
 ## Features
