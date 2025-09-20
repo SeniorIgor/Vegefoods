@@ -1,19 +1,23 @@
 # Vegefoods
 
-Vegefoods is an online shop for healthy foods, built with **React + Redux** on the frontend, and **Node.js + Express** + **MongoDB** on the backend. The app provides a full product catalog, user authentication, a shopping cart, and an API for managing products and orders.
+Vegefoods is an online shop for healthy foods, built with **React + Redux** on the frontend, and **Node.js + Express + MongoDB** on the backend. The app provides a full product catalog, user authentication, a shopping cart, and a REST API for managing products and orders.
 
-**Live Demo:** https://vegefoods-5uto.onrender.com/
+**Live Demo:** [https://vegefoods-5uto.onrender.com/](https://vegefoods-5uto.onrender.com/)
+
+> ⚠️ Note: The demo runs on a free tier service. If it has been idle, it may take up to a minute to wake up on first load.
+
+![Catalog Page](screenshots/catalog.png)
 
 ---
 
 ## Features
 
-- Browse product catalog of healthy foods with images and categories
-- User authentication and profile (login, register)
-- Shopping cart with Redux state management
-- Order placement and backend order API
-- Backend serves both static React frontend and API from the same server
-- MongoDB as data storage (products, users, orders)
+- Browse product catalog of healthy foods with images, categories, and pricing
+- User authentication (register, login) and profile management
+- Shopping cart with Redux state (add/remove/update quantities)
+- Order placement with form validation and backend persistence
+- Serving React UI and API from the same server in production
+- Security & performance enhancements with **helmet**, **cors**, **compression**
 
 ---
 
@@ -21,86 +25,117 @@ Vegefoods is an online shop for healthy foods, built with **React + Redux** on t
 
 **Frontend**
 
-- React (with component architecture)
-- Redux for global state management
-- SCSS
-- React Router for client-side routing
+- React (component‑based UI)
+- Redux for state management
+- SCSS for styling
+- React Router for routing
 
 **Backend**
 
 - Node.js + Express
-- MongoDB (Mongoose ODM)
-- REST API (`/products`, `/orders`, `/users`, etc.)
-- Middleware for auth, error handling, input validation
+- MongoDB using Mongoose ODM
+- JWT for authentication + password hashing (bcryptjs)
+- Middleware: express‑validator, auth checks, error handling
+- Other tools: helmet, cors, compression for production readiness
 
 ---
 
 ## Project Structure
 
 ```
-client/             # React app (components, pages, store, styles)
-server/             # Express backend (routes, models, controllers)
-models/             # Mongoose schemas (Product, User, Order, etc.)
-routes/             # API endpoints
-config/             # Environment config, DB connection
-middleware/         # Authentication, error-handling
-app.js / index.js   # Server entry point
+/
+├── client/                 # React frontend: components, pages, store, styles
+├── config/                 # Configuration files / defaults / environment settings
+├── middleware/             # Authentication, validation, error handling
+├── models/                 # Mongoose schemas (Product, User, Order, etc.)
+├── routes/                 # API endpoint definitions
+├── app.js                  # Server entry point (express app, serves static + API)
+├── package.json            # Scripts & dependencies
+└── README.md               # Project README
 ```
 
 ---
 
-## Setup
+## Setup & Scripts
 
-**Requirements:** Node 14, npm 6
+**Requirements:** Node.js ≥ 14, npm ≥ 6, MongoDB (local or remote)
 
-```bash
-# install dependencies
-npm run app:install
+1. Install dependencies
 
-# set environment variables
-# PORT=5001
-# JWT_SECRET=super_secret_string
-# MONGO_URI=mongodb+srv://<USER>:<PASS>@<HOST>/<DBNAME>?retryWrites=true&w=majority&appName=Cluster0
-# BASE_URL=http://localhost:5001
-# CATEGORY_ALL=all
+   ```bash
+   npm run app:install
+   ```
 
-# run in dev mode (frontend + backend)
-npm run dev
+2. Set environment variables (create `.env` or export in your shell):
 
-# build for production
-npm run app:install
-RUN npm run client:build
-RUN npm start
-```
+   ```
+   PORT=5001
+   JWT_SECRET=your_jwt_secret_here
+   MONGO_URI=your_mongo_connection_string
+   BASE_URL=http://localhost:5001
+   CATEGORY_ALL=all
+   NODE_ENV=development
+   ```
+
+3. Run in development mode
+
+   ```bash
+   npm run dev
+   ```
+
+4. Build & start in production mode
+   ```bash
+   npm run client:build
+   npm start
+   ```
+
+**Relevant npm scripts** are defined in `package.json`:
+
+- `app:install` — install server + client dependencies
+- `dev` — start server (with hot reload) + client dev server concurrently
+- `client:build` — build the React frontend for production
+- `start` — start the Express server (serves the React build)
 
 ---
 
 ## Example API (Backend)
 
-- `GET /api/products` → list all products
-- `POST /api/orders` → create a new order (requires auth)
-- `POST /api/users/login` → user authentication
-- `GET /api/users/profile` → get user profile info
+| Method | Endpoint             | Description                      | Protected? |
+| ------ | -------------------- | -------------------------------- | ---------- |
+| GET    | `/api/products`      | Get list of products             | No         |
+| POST   | `/api/orders`        | Create a new order               | Yes        |
+| POST   | `/api/users/login`   | Login user (get JWT)             | No         |
+| GET    | `/api/users/profile` | Get profile info of current user | Yes        |
+
+---
+
+## Screenshots
+
+![Catalog Desktop](screenshots/catalog-desktop.png)  
+![Cart Mobile](screenshots/cart-mobile.jpeg)  
+![Order Confirmation Mobile](screenshots/order-details-mobile.jpeg)
+
+More screenshots are available in the [`/screenshots`](./screenshots) folder.
 
 ---
 
 ## Learning Outcomes
 
-- Built a full MERN-stack application integrating React frontend with a MongoDB backend using Express.
-- Designed and managed global state using Redux (actions, reducers), and handled async API calls.
-- Implemented secure user auth (JWT), route protection, and proper separation of concerns.
-- Learned to deploy a full-stack app (serving both frontend and backend from one server) and work with environment configuration.
-- Gained experience in designing RESTful APIs, error handling, and database schema design.
+- Built a full MERN‑stack application integrating React frontend with Express/MongoDB backend.
+- Managed client state via Redux, and handled asynchronous flows and persistence.
+- Implemented secure authentication with JWTs, password hashing, and validation using express‑validator.
+- Applied production‑grade middleware (helmet, cors, compression) and environment‑based configuration.
+- Gained experience structuring a codebase clearly (routes, models, middleware) and deploying for production.
 
 ---
 
 ## Next Steps & Improvements
 
-- Add automated tests (unit + integration) for backend and frontend
-- Improve product search and filtering capabilities
-- Add image upload support and better media handling
-- Enhance performance (lazy loading, code splitting) and optimize UI/UX
-- Add CI/CD pipeline, monitoring, logging
+- Add unit and integration tests (backend + frontend)
+- Extend product search, filtering, pagination
+- Add support for image/media uploads
+- Optimize performance (lazy loading, code splitting, caching)
+- Introduce CI/CD pipeline, logging, monitoring
 
 ---
 
