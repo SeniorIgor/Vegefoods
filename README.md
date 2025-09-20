@@ -109,16 +109,6 @@ Vegefoods is an online shop for healthy foods, built with **React + Redux** on t
 
 ---
 
-## Screenshots
-
-![Catalog Desktop](screenshots/catalog-desktop.png)  
-![Cart Mobile](screenshots/cart-mobile.jpeg)  
-![Order Confirmation Mobile](screenshots/order-details-mobile.jpeg)
-
-More screenshots are available in the [`/screenshots`](./screenshots) folder.
-
----
-
 ## Learning Outcomes
 
 - Built a full MERN‑stack application integrating React frontend with Express/MongoDB backend.
